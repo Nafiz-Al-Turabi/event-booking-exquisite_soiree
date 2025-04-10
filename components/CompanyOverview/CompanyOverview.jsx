@@ -10,6 +10,15 @@ import { FaPlay } from 'react-icons/fa';
 
 const CompanyOverview = () => {
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isPressed, setIsPressed] = useState(false);
+
+    const handlePlay = () => {
+        setIsPressed(true);
+        setTimeout(() => {
+            setIsPlaying(true);
+            setIsPressed(false);
+        }, 150);
+    };
 
     return (
         <div className="max-w-[82.5rem] mx-auto px-4 2xl:px-0 py-[227px]">
@@ -49,25 +58,25 @@ const CompanyOverview = () => {
                 </div>
 
                 {/* Right Image & Video */}
-                <div className="flex gap-8">
-                    <div className='space-y-4'>
+                <div className="flex flex-col md:flex-row gap-8">
+                    <div className='flex md:flex-col space-y-4 md:mt-32 xl:mt-64'>
                         <Image
                             src={CarImage}
                             alt="Luxury event setup"
                             width={200}
                             height={200}
-                            className="h-[214px] rounded-2xl object-cover"
+                            className="w-full lg:h-[180px] xl:h-[214px] rounded-2xl object-cover"
                         />
                         <Image
                             src={girlImage}
                             alt="Luxury event setup"
                             width={200}
                             height={200}
-                            className="h-[214px] rounded-2xl object-cover"
+                            className="w-full lg:h-[180px] xl:h-[214px] rounded-2xl object-cover"
                         />
                     </div>
 
-                    <div className='bg-[#deb156] relative rounded-xl h-[580px] w-[424px]'>
+                    <div className='bg-[#deb156] relative rounded-xl h-[580px] w-full sm:w-[424px] lg:h-[380px] lg:w-[224px] xl:h-[580px] xl:w-[424px]'>
                         <div className='relative h-full'>
                             {!isPlaying ? (
                                 <>
@@ -76,20 +85,21 @@ const CompanyOverview = () => {
                                         alt="Video thumbnail"
                                         width={500}
                                         height={500}
-                                        className="h-[580px] w-[424px] rounded-xl object-cover absolute -top-3 -left-3"
+                                        className="h-[580px] w-full sm:w-[424px] lg:h-[380px] lg:w-[224px] xl:h-[580px] xl:w-[424px] rounded-xl object-cover absolute -top-3 -left-3"
                                     />
                                     <button
-                                        onClick={() => setIsPlaying(true)}
-                                        className='flex justify-center items-center h-[6.188rem] w-[6.188rem] bg-white/20 backdrop-blur-xs rounded-full text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer'
+                                        onClick={handlePlay}
+                                        className={`transition-transform duration-150 ease-in-out flex justify-center items-center h-[6.188rem] w-[6.188rem] bg-white/20 backdrop-blur-xs rounded-full text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer ${isPressed ? 'scale-90' : 'scale-100'
+                                            }`}
                                     >
                                         <FaPlay className='text-[3.25rem]' />
                                     </button>
                                 </>
                             ) : (
                                 <video
-                                    className="h-[580px] w-[424px] rounded-xl object-cover absolute -top-3 -left-3"
-                                    controls ={false}
-                                    loop= {true}
+                                    className="h-[580px] w-full sm:w-[424px] lg:h-[380px] lg:w-[224px] xl:h-[580px] xl:w-[424px] rounded-xl object-cover absolute -top-3 -left-3"
+                                    controls={false}
+                                    loop={true}
                                     autoPlay
                                 >
                                     <source src="/videos/overview.mp4" type="video/mp4" />
