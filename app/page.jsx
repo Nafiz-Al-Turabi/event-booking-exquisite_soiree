@@ -1,11 +1,9 @@
-import Image from "next/image";
-import bannar from "@/public/images/banner.png";
+import HomePage from "@/components/Home/HomePage";
+
 export default function Home() {
   return (
     <div>
-      <header style={{backgroundImage: `url(${bannar.src})`}} className="bg-cover bg-center h-screen flex items-center justify-center">
-
-      </header>
+      <HomePage />
     </div>
   );
 }
