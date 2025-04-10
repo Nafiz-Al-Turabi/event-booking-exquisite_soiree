@@ -3,6 +3,7 @@ import bannar from "@/public/images/banner.png";
 import herologo from "@/public/herologo.svg";
 import CompanyOverview from "../CompanyOverview/CompanyOverview";
 import BookingPolicy from "../BookingPolicy/BookingPolicy";
+import Contact from "../Contact/Contact";
 export default function HomePage() {
   return (
     <div>
@@ -21,12 +22,15 @@ export default function HomePage() {
             <h1 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[5.3125rem] analogue-font tracking-[1.0625rem] text-center font-bold lg:font-normal">EXQUISITE SOIRÉE</h1>
             <p className="text-[1.5rem] sm:text-[1.8rem] lg:text-[2rem] xl:text-[3rem] text-center analogue-font text-white">Luxury Restroom & Photo Booth Rentals for Your Events</p>
           </div>
-          
+
         </div>
       </header>
       <div clssName="my-[227px]">
         <CompanyOverview />
-        <BookingPolicy/>
+        <BookingPolicy />
+      </div>
+      <div>
+        <Contact />
       </div>
     </div>
   );

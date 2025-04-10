@@ -28,10 +28,12 @@ body {
   font-family: "Analogue", sans-serif;
 }
 
-
-.rgb-border {
-  border: 1px solid;
-  border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
-  border-radius: 12px; /* optional */
-  background-color: transparent;
+/* others */
+.rgb-bg {
+  background-image: linear-gradient(-50deg, #6C470E, #deb156, #6C470E);
 }
+
+.contact-shadow{
+  box-shadow:  30px 20px 40px rgba(0, 0, 0, 0.43)
+}
+
