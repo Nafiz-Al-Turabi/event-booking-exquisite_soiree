@@ -2,6 +2,7 @@ import Image from "next/image";
 import bannar from "@/public/images/banner.png";
 import herologo from "@/public/herologo.svg";
 import CompanyOverview from "../CompanyOverview/CompanyOverview";
+import BookingPolicy from "../BookingPolicy/BookingPolicy";
 export default function HomePage() {
   return (
     <div>
@@ -23,8 +24,9 @@ export default function HomePage() {
           
         </div>
       </header>
-      <div>
+      <div clssName="my-[227px]">
         <CompanyOverview />
+        <BookingPolicy/>
       </div>
     </div>
   );

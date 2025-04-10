@@ -21,7 +21,7 @@ const CompanyOverview = () => {
     };
 
     return (
-        <div className="max-w-[82.5rem] mx-auto px-4 2xl:px-0 py-[227px]">
+        <div className="max-w-[82.5rem] mx-auto px-4 2xl:px-0 pt-[227px]">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
                 {/* Left Content */}
                 <div className="text-[#D2D2D5] flex-1">
@@ -59,7 +59,7 @@ const CompanyOverview = () => {
 
                 {/* Right Image & Video */}
                 <div className="flex flex-col md:flex-row gap-8">
-                    <div className='flex md:flex-col space-y-4 md:mt-32 xl:mt-64'>
+                    <div className='flex flex-col space-y-4 md:mt-32 xl:mt-64'>
                         <Image
                             src={CarImage}
                             alt="Luxury event setup"
