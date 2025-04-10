@@ -56,8 +56,8 @@ const BookingPolicy = () => {
                             <div className="text-[#deb94a] mb-4 flex justify-center items-center">
                                 <Image src={policy.icon} alt={policy.title} />
                             </div>
-                            <h3 className="text-2xl Playfair-font font-semibold mb-2">{policy.title}</h3>
-                            <p className="text-lg text-gray-300">{policy.desc}</p>
+                            <h3 className="text-lg xl:text-2xl Playfair-font font-semibold mb-2">{policy.title}</h3>
+                            <p className="text-sm xl:text-lg text-gray-300">{policy.desc}</p>
                         </div>
                     ))}
                 </div>
