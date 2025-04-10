@@ -27,3 +27,11 @@ body {
 .analogue-font {
   font-family: "Analogue", sans-serif;
 }
+
+
+.rgb-border {
+  border: 1px solid;
+  border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+  border-radius: 12px; /* optional */
+  background-color: transparent;
+}
