@@ -13,7 +13,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section className="py-12 px-4 max-w-[82.5rem] mx-auto mb-[100px] ">
+    <section className="py-12 px-4 2xl:px-0 max-w-[82.5rem] mx-auto mb-[100px] ">
       <h2 className="text-white text-4xl sm:text-[3.5rem] analogue-font font-semibold mb-10">Gallery</h2>
 
       <div className="space-y-6">
