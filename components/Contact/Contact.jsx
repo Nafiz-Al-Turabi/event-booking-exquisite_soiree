@@ -10,11 +10,11 @@ const Contact = () => {
   return (
     <div className='px-4 2xl:px-0'>
       <div className="max-w-[82.5rem] mx-auto rgb-bg p-[1px] rounded-xl overflow-hidden">
-        <div className="bg-[#1f1e1d] p-4 lg:pr-8 lg:pl-14 lg:py-8 rounded-xl flex flex-col lg:flex-row gap-8">
+        <div className="bg-[#1f1e1d] p-4 lg:pr-8 lg:pl-14 lg:py-8 rounded-xl flex flex-col md:flex-row gap-8">
           {/* Left Section */}
           <div className="flex-1 text-white space-y-6">
             <div>
-              <h2 className="text-3xl lg:text-[2.5rem] analogue-font mb-6">
+              <h2 className="text-4xl lg:text-[2.5rem] analogue-font mb-6">
                 Let’s Make Your Event<br />Unforgettable!
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-white max-w-[30ch] mb-6">Contact us for expert assistance and hassle-free rental solutions.</p>

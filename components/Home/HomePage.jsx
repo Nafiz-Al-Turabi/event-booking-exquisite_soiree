@@ -4,6 +4,7 @@ import herologo from "@/public/herologo.svg";
 import CompanyOverview from "../CompanyOverview/CompanyOverview";
 import BookingPolicy from "../BookingPolicy/BookingPolicy";
 import Contact from "../Contact/Contact";
+import Gallery from "../Gallery/Gallery";
 export default function HomePage() {
   return (
     <div>
@@ -30,6 +31,7 @@ export default function HomePage() {
         <BookingPolicy />
       </div>
       <div>
+        <Gallery/>
         <Contact />
       </div>
     </div>

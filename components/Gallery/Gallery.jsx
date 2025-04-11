@@ -1,0 +1,62 @@
+'use client';
+import React from 'react';
+import Image from 'next/image';
+
+const images = [
+  '/gallery/gallery1.png',
+  '/gallery/gallery2.png',
+  '/gallery/gallery3.png',
+  '/gallery/gallery4.jpeg',
+  '/gallery/gallery5.jpeg',
+  '/gallery/gallery6.png',
+];
+
+const Gallery = () => {
+  return (
+    <section className="py-12 px-4 max-w-[82.5rem] mx-auto ">
+      <h2 className="text-white text-[3.5rem] analogue-font font-semibold mb-10">Gallery</h2>
+
+      <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {images.map((src, index) => {
+            if (index < 3) {
+              return (
+                <Image
+                  key={index}
+                  src={src}
+                  alt={`Gallery ${index + 1}`}
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              );
+            }
+            return null;
+          })}
+        </div>
+
+        {/* Remaining images in grid-cols-4 with first one col-span-2 */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          {images.map((src, index) => {
+            if (index < 3) return null;
+
+            const colSpan = index === 3 ? 'lg:col-span-2' : '';
+            return (
+              <div key={index} className={colSpan}>
+                <Image
+                  src={src}
+                  alt={`Gallery ${index + 1}`}
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Gallery;
