@@ -8,6 +8,8 @@ import cancel from '@/public/images/cancel.svg';
 import rental from '@/public/images/rental.svg';
 import delivery from '@/public/images/delivery.svg';
 import Image from 'next/image';
+import backgroundImage from '@/public/Group2.svg'
+
 
 const policies = [
     {
@@ -44,22 +46,26 @@ const policies = [
 
 const BookingPolicy = () => {
     return (
-        <div className="text-white pb-[277px] pt-20 px-4">
-            <div className="max-w-[82.5rem] mx-auto text-center">
-                <h2 className="text-3xl sm:text-[3.5rem] analogue-font mb-12">Booking Policy</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {policies.map((policy, index) => (
-                        <div
-                            key={index}
-                            className={`border border-[#DEB156] rounded-2xl p-6 bg-[#3c3c3c]/20  transition ${index > 3 ? 'lg:col-span-2' : ''}`}
-                        >
-                            <div className="text-[#deb94a] mb-4 flex justify-center items-center">
-                                <Image src={policy.icon} alt={policy.title} />
+        <div className='relative '>
+                <Image src={backgroundImage} alt="Background" className="absolute bottom-1/3  opacity-5  " />
+            <div className="text-white pb-[100px] pt-20 px-4 relative">
+
+                <div className="max-w-[82.5rem] mx-auto text-center ">
+                    <h2 className="text-3xl sm:text-[3.5rem] analogue-font mb-12">Booking Policy</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {policies.map((policy, index) => (
+                            <div
+                                key={index}
+                                className={`border border-[#DEB156] rounded-2xl p-6 bg-[#3c3c3c]/20  transition ${index > 3 ? 'lg:col-span-2' : ''}`}
+                            >
+                                <div className="text-[#deb94a] mb-4 flex justify-center items-center">
+                                    <Image src={policy.icon} alt={policy.title} />
+                                </div>
+                                <h3 className="text-lg xl:text-2xl Playfair-font font-semibold mb-2">{policy.title}</h3>
+                                <p className="text-sm xl:text-lg text-gray-300">{policy.desc}</p>
                             </div>
-                            <h3 className="text-lg xl:text-2xl Playfair-font font-semibold mb-2">{policy.title}</h3>
-                            <p className="text-sm xl:text-lg text-gray-300">{policy.desc}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,6 +6,8 @@ import borderShape from '@/public/rentalImages/border.png';
 import bgShape from '@/public/rentalImages/bg shapes.svg';
 import bgShape2 from '@/public/rentalImages/bg shapes2.svg';
 import threeD from '@/public/rentalImages/Asterisk.svg';
+import backgroundImage from '@/public/Group3.svg'
+
 
 const RentalPrice1 = [
     {
@@ -68,68 +70,75 @@ export default function RentalPrice() {
     const data = activeTab === 'restroom' ? RentalPrice1 : RentalPrice2;
 
     return (
-        <div className='px-4 2xl:px-0'>
-            {/* Tabs */}
-            <div className='max-w-[51.5rem] mx-auto text-center bg-[#201F1E] border border-[#C7C7C7] rounded-[16px] p-2 sm:p-4 lg:p-6 mb-8 '>
-                <div className='grid grid-cols-2 gap-4'>
-                    {[
-                        { key: 'restroom', label: '2-Suite Luxury\nRestroom Trailer' },
-                        { key: 'booth', label: 'Photo Booth Rental' },
-                    ].map((tab) => (
-                        <div
-                            key={tab.key}
-                            className={` ${activeTab === tab.key ? 'p-[1px] bg-gradient-to-tl from-yellow-700 via-yellow-300 to-yellow-700 rounded-2xl' : 'opacity-50'
-                                }`}
-                        >
-                            <button
-                                className={`w-full h-full text-xs sm:text-lg lg:text-2xl Playfair-font font-bold text-white p-2 sm:p-4 lg:p-6 rounded-2xl cursor-pointer relative overflow-hidden z-40 ${activeTab === tab.key ? "bg-[#1A1918]" : ""}`}
-                                onClick={() => setActiveTab(tab.key)}
-                            >
-                                <span className='relative z-40 whitespace-pre-line'>{tab.label}</span>
-                                <Image src={bgShape2} alt='bg-shape' className={`absolute bottom-0 right-1 z-0 ${activeTab === tab.key ? '' : "hidden "}`} />
-                                <div className={`${activeTab === tab.key ? 'h-[80px] rounded-ball2 w-[80px] bg-[#F2E462] absolute rounded-full -top-8 left-2/5 duration-300' : ""}`}></div>
-                            </button>
-                        </div>
-                    ))}
+        <div className='relative'>
+            <Image src={backgroundImage} alt="Background" className="absolute -bottom-96 left-0 opacity-5 " />
+            <div className='px-4 2xl:px-0 relative z-40'>
+                <div className='flex flex-col justify-center items-center text-white mb-12 '>
+                    <h1 className='text-3xl sm:text-[3.5rem] analogue-font mb-6'>Rental Price & hours</h1>
+                    <p className='text-base sm:text-lg text-[#D2D2D5]'>We offer competitive pricing with flexible rental durations.</p>
                 </div>
-            </div>
+                {/* Tabs */}
+                <div className='max-w-[51.5rem] mx-auto text-center bg-[#201F1E] border border-[#C7C7C7] rounded-[16px] p-2 sm:p-4 lg:p-6 mb-8 '>
+                    <div className='grid grid-cols-2 gap-4'>
+                        {[
+                            { key: 'restroom', label: '2-Suite Luxury\nRestroom Trailer' },
+                            { key: 'booth', label: 'Photo Booth Rental' },
+                        ].map((tab) => (
+                            <div
+                                key={tab.key}
+                                className={` ${activeTab === tab.key ? 'p-[1px] bg-gradient-to-tl from-yellow-700 via-yellow-300 to-yellow-700 rounded-2xl' : 'opacity-50'
+                                    }`}
+                            >
+                                <button
+                                    className={`w-full h-full text-xs sm:text-lg lg:text-2xl Playfair-font font-bold text-white p-2 sm:p-4 lg:p-6 rounded-2xl cursor-pointer relative overflow-hidden z-40 ${activeTab === tab.key ? "bg-[#1A1918]" : ""}`}
+                                    onClick={() => setActiveTab(tab.key)}
+                                >
+                                    <span className='relative z-40 whitespace-pre-line'>{tab.label}</span>
+                                    <Image src={bgShape2} alt='bg-shape' className={`absolute bottom-0 right-1 z-0 ${activeTab === tab.key ? '' : "hidden "}`} />
+                                    <div className={`${activeTab === tab.key ? 'h-[80px] rounded-ball2 w-[80px] bg-[#F2E462] absolute rounded-full -top-8 left-2/5 duration-300' : ""}`}></div>
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-            {/* Tab Content */}
-            <div className='max-w-[82.5rem] mx-auto bg-[#1f1e1d] rounded-[16px] p-4 lg:p-6'>
-                <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch '>
-                    {data.map((item, index) => (
-                        <div key={index} className='group duration-300 h-full'>
-                            <div className='bg-gradient-to-tl group-hover:from-yellow-700 group-hover:via-yellow-300 group-hover:to-yellow-700 p-[1px] rounded-3xl relative h-full'>
-                                <Image src={borderShape} alt='border-shape' className='absolute -top-1 translate-x-2/13 z-20 hidden sm:block' />
-                                <div className='h-full flex flex-col justify-between text-white bg-[#1A1918] rounded-3xl p-4 sm:p-6 relative overflow-hidden'>
-                                    <Image src={bgShape} alt='bg-shape' className='absolute top-0 -right-1' />
-                                    <Image
-                                        src={threeD}
-                                        alt='3d-shape'
-                                        width={77}
-                                        height={77}
-                                        className='mt-[54px] mb-[29px] grayscale-100 group-hover:grayscale-0 duration-300'
-                                    />
-                                    <div className='h-[159px] rounded-ball w-[149px] bg-white group-hover:bg-[#f2e462] absolute rounded-full -top-32 translate-x-2/3 duration-300'></div>
-                                    <div className='space-y-5'>
-                                        <h1 className='text-2xl Playfair-font font-bold max-w-[16ch]'>{item.title}</h1>
-                                        <p>{item.description}</p>
-                                        {item.diposit && (
-                                            <p className='text-sm italic text-yellow-200'>{item.diposit}</p>
-                                        )}
-                                        <div className='flex justify-between items-center text-xl font-bold text-[#DEB94A] my-[29px]'>
-                                            <p>{item.price}</p>
-                                            <span>-</span>
-                                            <p>{item.duration}</p>
+                {/* Tab Content */}
+                <div className='max-w-[82.5rem] mx-auto bg-[#1f1e1d] rounded-[16px] p-4 lg:p-6'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch '>
+                        {data.map((item, index) => (
+                            <div key={index} className='group duration-300 h-full'>
+                                <div className='bg-gradient-to-tl group-hover:from-yellow-700 group-hover:via-yellow-300 group-hover:to-yellow-700 p-[1px] rounded-3xl relative h-full'>
+                                    <Image src={borderShape} alt='border-shape' className='absolute -top-1 translate-x-2/13 z-20 hidden sm:block' />
+                                    <div className='h-full flex flex-col justify-between text-white bg-[#1A1918] rounded-3xl p-4 sm:p-6 relative overflow-hidden'>
+                                        <Image src={bgShape} alt='bg-shape' className='absolute top-0 -right-1' />
+                                        <Image
+                                            src={threeD}
+                                            alt='3d-shape'
+                                            width={77}
+                                            height={77}
+                                            className='mt-[54px] mb-[29px] grayscale-100 group-hover:grayscale-0 duration-300'
+                                        />
+                                        <div className='h-[159px] rounded-ball w-[149px] bg-white group-hover:bg-[#f2e462] absolute rounded-full -top-32 translate-x-2/3 duration-300'></div>
+                                        <div className='space-y-5'>
+                                            <h1 className='text-2xl Playfair-font font-bold max-w-[16ch]'>{item.title}</h1>
+                                            <p>{item.description}</p>
+                                            {item.diposit && (
+                                                <p className='text-sm italic text-yellow-200'>{item.diposit}</p>
+                                            )}
+                                            <div className='flex justify-between items-center text-xl font-bold text-[#DEB94A] my-[29px]'>
+                                                <p>{item.price}</p>
+                                                <span>-</span>
+                                                <p>{item.duration}</p>
+                                            </div>
                                         </div>
+                                        <button className='w-full rounded-lg border border-[#C7C7C7] group-hover:border-[#deb94a] group-hover:bg-[#deb94a] duration-300 py-4 text-lg font-semibold cursor-pointer mt-auto'>
+                                            Choose this plan
+                                        </button>
                                     </div>
-                                    <button className='w-full rounded-lg border border-[#C7C7C7] group-hover:border-[#deb94a] group-hover:bg-[#deb94a] duration-300 py-4 text-lg font-semibold cursor-pointer mt-auto'>
-                                        Choose this plan
-                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
