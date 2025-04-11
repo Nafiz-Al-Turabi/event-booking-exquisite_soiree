@@ -1,6 +1,10 @@
 'use client';
 import React from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import lactionPin from '@/public/location-pin.svg'
+import mail from '@/public/mail.svg'
+import phone from '@/public/phone.svg'
+import Image from 'next/image';
 
 const Contact = () => {
   return (
@@ -22,17 +26,17 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-                <h4 className='text-2xl analogue-font mb-4'>Contact info</h4>
+              <h4 className='text-2xl analogue-font mb-4'>Contact info</h4>
               <div className="flex items-center text-sm gap-3 text-gray-300">
-                <FaMapMarkerAlt className="text-[#deb94a]" />
+                <Image src={lactionPin} alt="Location Pin" className="w-8 h-8" />
                 <span>Drottninggatan 11, 641 30 Katrineholm</span>
               </div>
               <div className="flex items-center text-sm gap-3 text-gray-300">
-                <FaEnvelope className="text-[#deb94a]" />
+                <Image src={mail} alt="Location Pin" className="w-8 h-8" />
                 <span>exquisitesoiree@mail.com</span>
               </div>
               <div className="flex items-center text-sm gap-3 text-gray-300">
-                <FaPhoneAlt className="text-[#deb94a]" />
+                <Image src={phone} alt="Location Pin" className="w-8 h-8" />
                 <span>+46 73 593 09 04</span>
               </div>
             </div>

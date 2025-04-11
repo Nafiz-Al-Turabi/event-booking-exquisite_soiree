@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaCalendarCheck, FaMoneyCheckAlt, FaTruckLoading, FaBan, FaPlug, FaMapMarkedAlt } from 'react-icons/fa';
 import reservation from '@/public/images/Reservations.svg';
-import deposit from '@/public/images/deposit.svg';
+import deposit from '@/public/images/Deposit.svg';
 import settings from '@/public/images/settings.svg';
 import cancel from '@/public/images/cancel.svg';
 import rental from '@/public/images/rental.svg';
