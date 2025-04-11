@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Contact = () => {
   return (
-    <div className='px-4 2xl:px-0'>
+    <div className='px-4 2xl:px-0 mb-[100px]'>
       <div className="max-w-[82.5rem] mx-auto rgb-bg p-[1px] rounded-xl overflow-hidden">
         <div className="bg-[#1f1e1d] p-4 lg:pr-8 lg:pl-14 lg:py-8 rounded-xl flex flex-col md:flex-row gap-8">
           {/* Left Section */}
