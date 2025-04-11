@@ -68,9 +68,9 @@ export default function RentalPrice() {
     const data = activeTab === 'restroom' ? RentalPrice1 : RentalPrice2;
 
     return (
-        <div>
+        <div className='px-4 2xl:px-0'>
             {/* Tabs */}
-            <div className='max-w-[51.5rem] mx-auto text-center bg-[#201F1E] border border-[#C7C7C7] rounded-[16px] p-4 lg:p-6 mb-8'>
+            <div className='max-w-[51.5rem] mx-auto text-center bg-[#201F1E] border border-[#C7C7C7] rounded-[16px] p-2 sm:p-4 lg:p-6 mb-8 '>
                 <div className='grid grid-cols-2 gap-4'>
                     {[
                         { key: 'restroom', label: '2-Suite Luxury\nRestroom Trailer' },
@@ -82,7 +82,7 @@ export default function RentalPrice() {
                                 }`}
                         >
                             <button
-                                className={`w-full h-full text-2xl Playfair-font font-bold text-white p-6 rounded-2xl cursor-pointer relative overflow-hidden z-40 ${activeTab === tab.key ? "bg-[#1A1918]" : ""}`}
+                                className={`w-full h-full text-xs sm:text-lg lg:text-2xl Playfair-font font-bold text-white p-2 sm:p-4 lg:p-6 rounded-2xl cursor-pointer relative overflow-hidden z-40 ${activeTab === tab.key ? "bg-[#1A1918]" : ""}`}
                                 onClick={() => setActiveTab(tab.key)}
                             >
                                 <span className='relative z-40 whitespace-pre-line'>{tab.label}</span>
@@ -96,11 +96,11 @@ export default function RentalPrice() {
 
             {/* Tab Content */}
             <div className='max-w-[82.5rem] mx-auto bg-[#1f1e1d] rounded-[16px] p-4 lg:p-6'>
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch '>
                     {data.map((item, index) => (
                         <div key={index} className='group duration-300 h-full'>
                             <div className='bg-gradient-to-tl group-hover:from-yellow-700 group-hover:via-yellow-300 group-hover:to-yellow-700 p-[1px] rounded-3xl relative h-full'>
-                                <Image src={borderShape} alt='border-shape' className='absolute -top-1 translate-x-2/13 z-20' />
+                                <Image src={borderShape} alt='border-shape' className='absolute -top-1 translate-x-2/13 z-20 hidden sm:block' />
                                 <div className='h-full flex flex-col justify-between text-white bg-[#1A1918] rounded-3xl p-4 sm:p-6 relative overflow-hidden'>
                                     <Image src={bgShape} alt='bg-shape' className='absolute top-0 -right-1' />
                                     <Image
