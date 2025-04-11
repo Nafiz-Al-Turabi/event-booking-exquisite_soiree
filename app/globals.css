@@ -30,10 +30,17 @@ body {
 
 /* others */
 .rgb-bg {
-  background-image: linear-gradient(-50deg, #6C470E, #deb156, #6C470E);
+  background-image: linear-gradient(100deg, #6C470E, #deb156, #6C470E);
 }
-
 .contact-shadow{
   box-shadow:  30px 20px 40px rgba(0, 0, 0, 0.43)
 }
 
+.rounded-ball{
+  fill: #ff9a04;
+  filter: blur(100px);
+}
+
+.rounded-ball2{
+  filter: blur(60px);
+}
