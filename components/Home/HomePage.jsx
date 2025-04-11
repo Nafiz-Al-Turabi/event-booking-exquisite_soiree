@@ -5,6 +5,7 @@ import CompanyOverview from "../CompanyOverview/CompanyOverview";
 import BookingPolicy from "../BookingPolicy/BookingPolicy";
 import Contact from "../Contact/Contact";
 import Gallery from "../Gallery/Gallery";
+import OurServices from "../OurServices/OurServices";
 export default function HomePage() {
   return (
     <div>
@@ -31,6 +32,7 @@ export default function HomePage() {
         <BookingPolicy />
       </div>
       <div>
+        <OurServices/>
         <Gallery/>
         <Contact />
       </div>
