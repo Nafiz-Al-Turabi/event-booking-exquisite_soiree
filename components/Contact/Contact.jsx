@@ -55,7 +55,7 @@ const Contact = () => {
                   <input type="text" placeholder="Enter your number" className="bg-transparent border-b border-[#777980] py-2 px-1 focus:outline-none text-white" />
                 </div>
                 <textarea placeholder="Enter your email" className="w-full bg-transparent border-b border-[#777980] py-2 px-1 focus:outline-none text-white h-24 resize-none"></textarea>
-                <div className="max-w-sm mx-auto flex items-start gap-2 mt-4 mb-4">
+                <div className="flex items-start gap-2 mt-4 mb-4 max-w-[36ch]">
                   <input type="checkbox" id="consent" className="mt-1" />
                   <label htmlFor="consent" className="text-sm text-gray-300">I consent to automated communications about Exquisite Soirée’s services.</label>
                 </div>
