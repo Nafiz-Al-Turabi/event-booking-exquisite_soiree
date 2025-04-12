@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import lactionPin from '@/public/location-pin.svg'
 import mail from '@/public/mail.svg'
 import phone from '@/public/phone.svg'
