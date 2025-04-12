@@ -15,10 +15,19 @@
   src: url("/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("opentype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* .scroll-offset {
+  scroll-margin-top: 200px; 
+} */
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #191918;
 }
+
 
 .Playfair-font {
   font-family: "Playfair Display", serif;
