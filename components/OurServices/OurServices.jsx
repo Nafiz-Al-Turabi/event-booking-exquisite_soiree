@@ -46,7 +46,7 @@ const OurServices = () => {
         <div className='relative'>
             <Image src={backgroundImage} alt="Background" className="absolute bottom-0 right-0 opacity-5 " />
 
-            <section className="pb-[148px] px-4 text-white relative z-40 ">
+            <section className="pb-[148px] pt-[100px] px-4 text-white relative z-40 ">
                 <h2 className="text-white text-4xl sm:text-[3.5rem] text-center analogue-font font-semibold mb-10">Our Services</h2>
                 <div className="max-w-[82.5rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, idx) => (

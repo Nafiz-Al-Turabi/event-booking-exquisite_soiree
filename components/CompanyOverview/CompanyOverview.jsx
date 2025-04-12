@@ -25,7 +25,7 @@ const CompanyOverview = () => {
     return (
         <div className=' relative'>
             <Image src={backgroundImage} alt="Background" className="absolute top-0 right-0 opacity-10 " />
-            <div className="max-w-[82.5rem] mx-auto px-4 2xl:px-0 pt-[127px]">
+            <div className="max-w-[82.5rem] mx-auto px-4 2xl:px-0 pt-[50px] lg:pt-[80px] xl:pt-[127px]">
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-10 relative z-40">
                     {/* Left Content */}
                     <div className="text-[#D2D2D5] flex-1">

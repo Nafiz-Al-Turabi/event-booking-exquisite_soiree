@@ -66,7 +66,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 lg:bg-[#00000042] lg:backdrop-blur-lg text-white">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 lg:bg-[#00000042] lg:backdrop-blur-lg text-white">
         <div className="flex justify-between items-center w-full max-w-[82.5rem] mx-auto px-4 2xl:px-0">
           <a href="#" className="flex items-center space-x-2 py-2">
             <Image src={logo} alt="Logo" height={80} />
@@ -118,22 +118,22 @@ export default function HomePage() {
       {/* Banner */}
       <Banner/>
       {/* Sections */}
-      <section id="company-overview" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['company-overview'] = el)}>
+      <section id="company-overview" className='scroll-mt-[50px] lg:scroll-mt-[80px] xl:scroll-mt-[120px]' ref={(el) => (sectionRefs.current['company-overview'] = el)}>
         <CompanyOverview />
       </section>
-      <section id="booking-policy" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['booking-policy'] = el)}>
+      <section id="booking-policy" className='scroll-mt-[50px] lg:scroll-mt-[80px] xl:scroll-mt-[120px]' ref={(el) => (sectionRefs.current['booking-policy'] = el)}>
         <BookingPolicy />
       </section>
-      <section id="pricing" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['pricing'] = el)}>
+      <section id="pricing" className='scroll-mt-[50px] lg:scroll-mt-[80px] xl:scroll-mt-[120px]' ref={(el) => (sectionRefs.current['pricing'] = el)}>
         <RentalPrice />
       </section>
-      <section id="services" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['services'] = el)}>
+      <section id="services" className='scroll-mt-[50px] lg:scroll-mt-[80px] xl:scroll-mt-[120px]' ref={(el) => (sectionRefs.current['services'] = el)}>
         <OurServices />
       </section>
-      <section id="gallery" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['gallery'] = el)}>
+      <section id="gallery" className='scroll-mt-[50px] lg:scroll-mt-[80px] xl:scroll-mt-[120px]' ref={(el) => (sectionRefs.current['gallery'] = el)}>
         <Gallery />
       </section>
-      <section id="contact" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['contact'] = el)}>
+      <section id="contact" className='scroll-mt-[50px] lg:scroll-mt-[80px] xl:scroll-mt-[120px]' ref={(el) => (sectionRefs.current['contact'] = el)}>
         <Contact />
       </section>
 

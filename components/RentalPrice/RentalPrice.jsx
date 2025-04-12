@@ -72,7 +72,7 @@ export default function RentalPrice() {
     return (
         <div className='relative'>
             <Image src={backgroundImage} alt="Background" className="absolute -bottom-96 left-0 opacity-5 " />
-            <div className='px-4 2xl:px-0 relative z-40'>
+            <div className='px-4 2xl:px-0 relative z-40 pt-[100px]'>
                 <div className='flex flex-col justify-center items-center text-white mb-12 '>
                     <h1 className='text-3xl sm:text-[3.5rem] analogue-font mb-6'>Rental Price & hours</h1>
                     <p className='text-base sm:text-lg text-[#D2D2D5]'>We offer competitive pricing with flexible rental durations.</p>
