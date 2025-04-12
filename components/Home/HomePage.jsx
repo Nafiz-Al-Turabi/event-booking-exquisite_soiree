@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import bannar from '@/public/images/banner.png';
-import herologo from '@/public/herologo.svg';
 import logo from '@/public/logo.svg';
 import CompanyOverview from '../CompanyOverview/CompanyOverview';
 import BookingPolicy from '../BookingPolicy/BookingPolicy';
@@ -13,6 +11,10 @@ import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
 import OurServices from '../OurServices/OurServices';
 import RentalPrice from '../RentalPrice/RentalPrice';
+import Banner from '../Banner/Banner';
+import tiktok from '@/public/tiktok.svg'; 
+import instagram from '@/public/instagram.svg'; 
+import facebook from '@/public/facebook.svg'; 
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -112,30 +114,7 @@ export default function HomePage() {
         </div>
       </nav>
       {/* Banner */}
-      <header
-        style={{ backgroundImage: `url(${bannar.src})` }}
-        className="bg-cover bg-center h-screen flex items-center justify-center"
-      >
-        <div>
-          <div className="flex justify-center mb-[36px]">
-            <Image
-              src={herologo}
-              alt="Logo"
-              width={198}
-              height={198}
-              className="rounded-full w-28 sm:w-36 lg:w-[198px] h-auto"
-            />
-          </div>
-          <div className="px-4 2xl:px-0">
-            <h1 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[5.3125rem] analogue-font tracking-[1.0625rem] text-center font-bold lg:font-normal">
-              EXQUISITE SOIRÉE
-            </h1>
-            <p className="text-[1.5rem] sm:text-[1.8rem] lg:text-[2rem] xl:text-[3rem] text-center analogue-font text-white">
-              Luxury Restroom & Photo Booth Rentals for Your Events
-            </p>
-          </div>
-        </div>
-      </header>
+      <Banner/>
       {/* Sections */}
       <section id="company-overview" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['company-overview'] = el)}>
         <CompanyOverview />
@@ -155,6 +134,47 @@ export default function HomePage() {
       <section id="contact" className='scroll-mt-[120px]' ref={(el) => (sectionRefs.current['contact'] = el)}>
         <Contact />
       </section>
+
+      <footer className="bg-[#1f1e1d] text-white pt-10">
+            <div className="max-w-[82.5rem] mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 mb-8">
+                {/* Logo */}
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <Image src={logo} alt="Exquisite Soiree"  />
+                </div>
+
+                {/* Navigation Links */}
+                <div className="flex flex-wrap justify-center gap-6 text-base uppercase font-light">
+                    <Link href="#company-overview">Company Overview</Link>
+                    <Link href="#booking-policy">Booking Policy</Link>
+                    <Link href="#pricing">Pricing</Link>
+                    <Link href="#services">Services</Link>
+                    <Link href="#gallery">Gallery</Link>
+                    <Link href="#contact">Contact Us</Link>
+                </div>
+
+                {/* Social Icons */}
+                <div className="flex gap-2">
+                    <Link href="#" className="rounded-full p-2 hover:opacity-80 duration-300">
+                        <Image src={tiktok} alt="TikTok" width={36} height={36} />
+                    </Link>
+                    <Link href="#" className="rounded-full p-2 hover:opacity-80 duration-300">
+                        <Image src={instagram} alt="Instagram" width={36} height={36} />
+                    </Link>
+                    <Link href="#" className="rounded-full p-2 hover:opacity-80 duration-300">
+                        <Image src={facebook} alt="Facebook" width={36} height={36} />
+                    </Link>
+                </div>
+            </div>
+            <hr className='border border-[#A5A5AB] '/>
+            {/* Bottom Footer */}
+            <div className="text-sm flex flex-col sm:flex-row justify-between items-center text-gray-400 max-w-[82.5rem] mx-auto py-8">
+                <p>© Copyright 2024, exquisitesoiree</p>
+                <div className="flex gap-4 mt-2 sm:mt-0">
+                    <Link href="#">Privacy Policy</Link>
+                    <Link href="#">Terms & Conditions</Link>
+                </div>
+            </div>
+        </footer>
     </div>
   );
 }

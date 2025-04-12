@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
 import logo from '@/public/logo.svg'; 
 import tiktok from '@/public/tiktok.svg'; 
 import instagram from '@/public/instagram.svg'; 

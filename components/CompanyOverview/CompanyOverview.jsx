@@ -29,7 +29,7 @@ const CompanyOverview = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-10 relative z-40">
                     {/* Left Content */}
                     <div className="text-[#D2D2D5] flex-1">
-                        <h2 className="text-[3.5rem] analogue-font mb-6">Company Overview</h2>
+                        <h2 className="text-3xl sm:text-[3.5rem] analogue-font mb-6">Company Overview</h2>
                         <div className="space-y-8">
                             <p className="text-lg">
                                 At EXQUISITE SOIRÉE, we specialize in high-quality event rentals, ensuring your guests enjoy comfort and entertainment.
