@@ -15,53 +15,59 @@ const RentalPrice1 = [
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$600',
         duration: '4 Hour',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/3"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
-        description: 'Fully stocked, Bluetooth radio, climate control.',
+        description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$700',
         duration: '5 Hour',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/4",
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
-        description: 'Fully stocked, Bluetooth radio, climate control.',
+        description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$900',
         duration: '6 Hour',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/5"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
-        description: 'Fully stocked, Bluetooth radio, climate control.',
+        description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$1,050',
         duration: '7 Hour',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/8"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
-        description: 'Fully stocked, Bluetooth radio, climate control.',
+        description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$1,200',
         duration: '8 Hour',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/6"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
-        description: 'Fully stocked, Bluetooth radio, climate control.',
+        description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available. ',
         price: '$1,350',
         duration: '9 Hour',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/7"
     },
 ];
 
 const RentalPrice2 = [
     {
         title: 'Photo Booth Rental',
-        description: 'Unlimited Photos and GIFs, onsite sharing, backdrop gallery, attendant included, travel up to 1 hour.',
-        diposit: '50% deposit required to secure booking date.',
-        price: '$1,350',
-        duration: '9 Hour',
+        description: 'Unlimited Photos and GIFs, Onsite text and Email sharing, Backdrop Online Gallery, Custom Booth interface, Custom overlay, On-site Photo Booth Attendant, Set up and Breakdown, Travel up to 1 hour',
+        price: ' $500',
+        duration: '4 Hour ',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/9"
     },
     {
         title: 'Photo Booth Rental',
-        description: 'Same as above with additional props and effects.',
-        diposit: '50% deposit required to secure booking date.',
-        price: '$1,350',
-        duration: '9 Hour',
+        description: 'Unlimited Photos and Gifs, Boomerang’s Black and White Glam Filter up to 200 onsite prints, unlimited text and Email sharing, Custom booth Interface, Props, Custom print templates, Backdrop, Onsite Gallery, On-site attendant, Set up and breakdown, Travel up to 1 hour.',
+        price: '$700-Luxury ',
+        duration: '4 Hour ',
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/2"
     },
 ];
 
@@ -131,9 +137,9 @@ export default function RentalPrice() {
                                                 <p>{item.duration}</p>
                                             </div>
                                         </div>
-                                        <button className='w-full rounded-lg border border-[#C7C7C7] group-hover:border-[#deb94a] group-hover:bg-[#deb94a] duration-300 py-4 text-lg font-semibold cursor-pointer mt-auto'>
+                                        <a href={item.link} target='_black' className='w-full text-center rounded-lg border border-[#C7C7C7] group-hover:border-[#deb94a] group-hover:bg-[#deb94a] duration-300 py-4 text-lg font-semibold cursor-pointer mt-auto'>
                                             Choose this plan
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
