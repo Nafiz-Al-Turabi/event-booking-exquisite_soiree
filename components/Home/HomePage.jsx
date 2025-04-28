@@ -156,15 +156,15 @@ export default function HomePage() {
 
                 {/* Social Icons */}
                 <div className="flex gap-2">
-                    <Link href="#" className="rounded-full p-2 hover:opacity-80 duration-300">
+                    <a href="https://www.tiktok.com/" target='blank' className="rounded-full p-2 hover:opacity-80 duration-300">
                         <Image src={tiktok} alt="TikTok" width={36} height={36} />
-                    </Link>
-                    <Link href="#" className="rounded-full p-2 hover:opacity-80 duration-300">
+                    </a>
+                    <a href="https://www.instagram.com/reel/DHQuibnu0fC/?igsh=ZG0zNWNyN29yNGpv" target='blank' className="rounded-full p-2 hover:opacity-80 duration-300">
                         <Image src={instagram} alt="Instagram" width={36} height={36} />
-                    </Link>
-                    <Link href="#" className="rounded-full p-2 hover:opacity-80 duration-300">
+                    </a>
+                    <a href="https://www.facebook.com/" target='blank' className="rounded-full p-2 hover:opacity-80 duration-300">
                         <Image src={facebook} alt="Facebook" width={36} height={36} />
-                    </Link>
+                    </a>
                 </div>
             </div>
             <hr className='border border-[#A5A5AB] '/>
