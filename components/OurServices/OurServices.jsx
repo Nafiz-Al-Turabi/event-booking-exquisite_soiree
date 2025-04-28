@@ -18,6 +18,7 @@ const services = [
             'Ideal for weddings, corporate events, VIP gatherings',
         ],
         img: image1,
+        link: "https://exquisitesoire.simplybook.me/v2/#book/count/1/"
     },
     {
         title: 'Photo Booth Rentals',
@@ -28,6 +29,7 @@ const services = [
             'Perfect for parties, weddings, & corporate events',
         ],
         img: image2,
+        link: "https://exquisitesoire.simplybook.me/v2/#book/count/1/"
     },
     {
         title: 'Miscellaneous',
@@ -38,6 +40,7 @@ const services = [
             'Modern design with great functionality and appeal.',
         ],
         img: image3,
+        link: "https://exquisitesoire.simplybook.me/v2/#book/count/1/"
     },
 ];
 
@@ -81,9 +84,9 @@ const OurServices = () => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <button className="mt-6 bg-[#DEB94A] hover:bg-[#DEB94A]/90 font-semibold py-5 px-4 rounded-lg cursor-pointer transition duration-300 ease-in-out">
+                                    <a href={service.link} target='blank' className="mt-6 bg-[#DEB94A] text-center hover:bg-[#DEB94A]/90 font-semibold py-5 px-4 rounded-lg cursor-pointer transition duration-300 ease-in-out">
                                         Reserve Now
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import check from '@/public/check.svg';
 import Image from 'next/image';
 import './CompanyOverview.css';
-import CarImage from '@/public/images/car.jpeg';
-import girlImage from '@/public/images/overview.png';
+import CarImage from '@/public/gallery/gallery8.jpg';
+import girlImage from '@/public/gallery/gallery7.jpg';
 import videoImage from '@/public/images/videoimage.png';
 import { FaPlay } from 'react-icons/fa';
 import backgroundImage from '@/public/Group.svg'
