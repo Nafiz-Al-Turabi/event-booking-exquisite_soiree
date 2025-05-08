@@ -60,13 +60,13 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-2xl analogue-font mb-4">Opening Hour</p>
-                <p className="text-lg">Everyday - <span className="font-medium">08:00 am - 09:00 pm</span></p>
+                <p className="text-lg">Everyday - <span className="font-medium">08:00 am - 05:00 pm</span></p>
               </div>
               <div className="space-y-6">
                 <h4 className='text-2xl analogue-font mb-4'>Contact info</h4>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={lactionPin} alt="Location Pin" className="w-8 h-8" />
-                  <span>Drottninggatan 11, 641 30 Katrineholm</span>
+                  <span>Northeastern Ohio</span>
                 </div>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={mail} alt="Mail" className="w-8 h-8" />
@@ -74,7 +74,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={phone} alt="Phone" className="w-8 h-8" />
-                  <span>+46 73 593 09 04</span>
+                  <span>330-962-1533</span>
                 </div>
               </div>
             </div>

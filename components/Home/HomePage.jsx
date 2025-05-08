@@ -167,7 +167,7 @@ export default function HomePage() {
                     </a>
                 </div>
             </div>
-            <hr className='border border-[#A5A5AB] '/>
+            <hr className='border border-[#38383a] '/>
             {/* Bottom Footer */}
             <div className="text-sm flex flex-col sm:flex-row justify-between items-center text-gray-400 max-w-[82.5rem] mx-auto py-8">
                 <p>© Copyright 2024, exquisitesoiree</p>

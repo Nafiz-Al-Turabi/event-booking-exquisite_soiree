@@ -8,9 +8,9 @@ const images = [
   '/gallery/gallery1.png',
   '/gallery/gallery2.png',
   '/gallery/gallery3.png',
-  '/gallery/gallery4.jpeg',
-  '/gallery/gallery5.jpeg',
-  '/gallery/gallery6.png',
+  '/gallery/gallery4.png',
+  '/gallery/gallery5.png',
+  '/gallery/gallery6.jpg',
 ];
 
 const Gallery = () => {
@@ -32,7 +32,7 @@ const Gallery = () => {
                     alt={`Gallery ${index + 1}`}
                     width={500}
                     height={500}
-                    className="w-full h-full object-cover rounded-md"
+                    className="w-full h-96 object-cover rounded-md"
                   />
                 );
               }
@@ -53,7 +53,7 @@ const Gallery = () => {
                     alt={`Gallery ${index + 1}`}
                     width={500}
                     height={500}
-                    className="w-full h-full object-cover rounded-md"
+                    className="w-full h-96 object-cover rounded-md"
                   />
                 </div>
               );
