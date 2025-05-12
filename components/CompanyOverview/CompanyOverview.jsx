@@ -5,7 +5,7 @@ import Image from 'next/image';
 import './CompanyOverview.css';
 import CarImage from '@/public/gallery/gallery9.jpg';
 import girlImage from '@/public/gallery/gallery7.jpg';
-import videoImage from '@/public/images/videoimage.png';
+import videoImage from '@/public/images/videoimage2.png';
 import { FaPlay } from 'react-icons/fa';
 import backgroundImage from '@/public/Group.svg'
 
