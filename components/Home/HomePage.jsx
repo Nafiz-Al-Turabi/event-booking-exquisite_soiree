@@ -42,7 +42,6 @@ export default function HomePage() {
       }
     }
   }, []);
-  // Detect active section on scroll
   useEffect(() => {
     const handleScroll = () => {
       for (let i = 0; i < sections.length; i++) {

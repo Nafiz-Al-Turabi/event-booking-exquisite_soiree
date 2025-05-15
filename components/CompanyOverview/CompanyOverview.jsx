@@ -4,7 +4,7 @@ import check from '@/public/check.svg';
 import Image from 'next/image';
 import './CompanyOverview.css';
 import CarImage from '@/public/gallery/gallery9.jpg';
-import girlImage from '@/public/gallery/gallery7.jpg';
+import girlImage from '@/public/gallery/washroom.webp';
 import videoImage from '@/public/images/videoimage2.png';
 import { FaPlay } from 'react-icons/fa';
 import backgroundImage from '@/public/Group.svg'
@@ -76,7 +76,7 @@ const CompanyOverview = () => {
                                 alt="Luxury event setup"
                                 width={200}
                                 height={200}
-                                className="w-full lg:h-[180px] xl:h-[214px] rounded-2xl object-cover"
+                                className="w-full lg:h-[200px] xl:h-[314px] rounded-2xl object-conain"
                             />
                         </div>
 
