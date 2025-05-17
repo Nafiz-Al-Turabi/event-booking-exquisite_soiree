@@ -6,13 +6,12 @@ import backgroundMask2 from '@/public/Mask2.svg'
 
 const images = [
   '/gallery/photoGallery.jpeg',
-  '/gallery/photoGallery2.png',
+  '/gallery/gallery1.png',
   '/gallery/photoGallery3.jpeg',
   '/gallery/photoGallery4.jpeg',
   '/gallery/photoGallery5.png',
   '/gallery/photoGallery6.jpeg',
-  '/gallery/photoGallery7.jpeg',
-  '/photoBooth/photobooth.jpg',
+  // '/photoBooth/photobooth.jpg',
   '/photoBooth/photobooth2.jpg',
   '/photoBooth/photobooth3.jpg',
 ];
@@ -47,9 +46,9 @@ const Gallery = () => {
           {/* Remaining images in grid-cols-4 with first one col-span-2 */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {images.map((src, index) => {
-              if (index < 3) return null;
+              if (index < 1) return null;
 
-              const colSpan = index === 3 ? 'lg:col-span-2' : '';
+              const colSpan = index === 1 ? 'lg:col-span-2' : '';
               return (
                 <div key={index} className={colSpan}>
                   <Image

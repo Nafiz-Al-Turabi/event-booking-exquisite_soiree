@@ -72,7 +72,7 @@ const RentalPrice2 = [
 ];
 
 export default function RentalPrice() {
-    const [activeTab, setActiveTab] = useState('restroom');
+    const [activeTab, setActiveTab] = useState('booth');
     const data = activeTab === 'restroom' ? RentalPrice1 : RentalPrice2;
 
     return (
@@ -87,8 +87,8 @@ export default function RentalPrice() {
                 <div className='max-w-[51.5rem] mx-auto text-center bg-[#201F1E] border border-[#C7C7C7] rounded-[16px] p-2 sm:p-4 lg:p-6 mb-8 '>
                     <div className='grid grid-cols-2 gap-4'>
                         {[
-                            { key: 'restroom', label: '2-Suite Luxury\nRestroom Trailer' },
                             { key: 'booth', label: 'Photo Booth Rental' },
+                            { key: 'restroom', label: '2-Suite Luxury\nRestroom Trailer' },
                         ].map((tab) => (
                             <div
                                 key={tab.key}

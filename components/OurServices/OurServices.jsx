@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import image1 from '@/public/photobooth/photobooth.jpg';
+import image1 from '@/public/images/restroo.jpeg';
 import image2 from '@/public/photobooth/photobooth2.jpg';
 import image3 from '@/public/gallery/Miscellaneous.jpg';
 import backgroundImage from '@/public/Group5.svg'

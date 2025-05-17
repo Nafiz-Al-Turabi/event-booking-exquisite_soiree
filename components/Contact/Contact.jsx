@@ -70,7 +70,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={mail} alt="Mail" className="w-8 h-8" />
-                  <span>exquisitesoiree@gmail.com</span>
+                  <span>exquisitesoire@gmail.com</span>
                 </div>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={phone} alt="Phone" className="w-8 h-8" />
