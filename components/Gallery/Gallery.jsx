@@ -5,12 +5,13 @@ import backgroundMask from '@/public/Mask1.svg';
 import backgroundMask2 from '@/public/Mask2.svg';
 
 const images = [
+  '/gallery/photoGallery5.png',
   '/gallery/photoGallery.jpeg',
   '/gallery/gallery1.png',
   '/gallery/photoGallery3.jpeg',
   '/gallery/photoGallery4.jpeg',
   '/gallery/photoGallery6.jpeg',
-  '/photoBooth/photobooth.jpg',
+  // '/photoBooth/photobooth.jpg',
   '/photoBooth/photobooth2.jpg',
   '/photoBooth/photobooth3.jpg',
 ];

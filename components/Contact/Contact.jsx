@@ -66,7 +66,7 @@ const Contact = () => {
                 <h4 className='text-2xl analogue-font mb-4'>Contact info</h4>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={lactionPin} alt="Location Pin" className="w-8 h-8" />
-                  <span>Northeastern Ohio</span>
+                  <span>Northeast Ohio</span>
                 </div>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={mail} alt="Mail" className="w-8 h-8" />
@@ -74,7 +74,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center text-sm gap-3 text-gray-300">
                   <Image src={phone} alt="Phone" className="w-8 h-8" />
-                  <span>330-962-1533</span>
+                  <span>330.962.1533</span>
                 </div>
               </div>
             </div>
