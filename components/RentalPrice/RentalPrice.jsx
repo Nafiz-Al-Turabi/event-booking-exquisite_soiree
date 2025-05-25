@@ -67,7 +67,7 @@ const RentalPrice2 = [
         description: 'Unlimited Photos and Gifs, Boomerang’s Black and White Glam Filter up to 200 onsite prints, unlimited text and Email sharing, Custom booth Interface, Props, Custom print templates, Backdrop, Onsite Gallery, On-site attendant, Set up and breakdown, Travel up to 1 hour.',
         price: '$700-Luxury ',
         duration: '4 Hour ',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/2"
+        link: "https://exquisitesoire.simplybook.me/v2/#book/service/10"
     },
 ];
 
