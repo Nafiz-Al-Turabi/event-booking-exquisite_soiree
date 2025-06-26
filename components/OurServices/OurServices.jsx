@@ -69,7 +69,7 @@ const OurServices = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='font-semibold'>To book send us email</p>
+                            <p className='font-semibold'>Please send us an email to book.</p>
                         </div>
                         <button 
                             onClick={() => setShowNotification(false)}

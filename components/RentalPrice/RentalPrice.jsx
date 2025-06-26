@@ -96,7 +96,7 @@ export default function RentalPrice() {
                             </svg>
                         </div>
                         <div>
-                            <p className='font-semibold'>To book send us email</p>
+                            <p className='text-sm sm:text-basefont-semibold'>Please send us an email to book.</p>
                         </div>
                         <button 
                             onClick={() => setShowNotification(false)}
