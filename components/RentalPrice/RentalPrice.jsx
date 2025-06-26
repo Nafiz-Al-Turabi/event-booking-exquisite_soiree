@@ -15,42 +15,42 @@ const RentalPrice1 = [
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$600',
         duration: '4 Hour',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/3"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/3"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$700',
         duration: '5 Hour',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/4",
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/4",
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$900',
         duration: '6 Hour',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/5"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/5"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$1,050',
         duration: '7 Hour',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/8"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/8"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available.',
         price: '$1,200',
         duration: '8 Hour',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/6"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/6"
     },
     {
         title: '2-Suite Luxury Restroom Trailer',
         description: 'Two-suite restroom rental trailer, fully stocked with supplies. A/C and heat provided. Bluetooth radio available. ',
         price: '$1,350',
         duration: '9 Hour',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/7"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/7"
     },
 ];
 
@@ -60,23 +60,56 @@ const RentalPrice2 = [
         description: 'Unlimited Photos and GIFs, Onsite text and Email sharing, Backdrop Online Gallery, Custom Booth interface, Custom overlay, On-site Photo Booth Attendant, Set up and Breakdown, Travel up to 1 hour',
         price: ' $500',
         duration: '4 Hour ',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/9"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/9"
     },
     {
         title: 'Photo Booth Rental',
-        description: 'Unlimited Photos and Gifs, Boomerang’s Black and White Glam Filter up to 200 onsite prints, unlimited text and Email sharing, Custom booth Interface, Props, Custom print templates, Backdrop, Onsite Gallery, On-site attendant, Set up and breakdown, Travel up to 1 hour.',
+        description: "Unlimited Photos and Gifs, Boomerang’s Black and White Glam Filter up to 200 onsite prints, unlimited text and Email sharing, Custom booth Interface, Props, Custom print templates, Backdrop, Onsite Gallery, On-site attendant, Set up and breakdown, Travel up to 1 hour.",
         price: '$700-Luxury ',
         duration: '4 Hour ',
-        link: "https://exquisitesoire.simplybook.me/v2/#book/service/10"
+        // link: "https://exquisitesoire.simplybook.me/v2/#book/service/10"
     },
 ];
 
 export default function RentalPrice() {
     const [activeTab, setActiveTab] = useState('booth');
+    const [showNotification, setShowNotification] = useState(false);
     const data = activeTab === 'restroom' ? RentalPrice1 : RentalPrice2;
+
+    const handleChoosePlan = () => {
+        setShowNotification(true);
+        // Auto-hide notification after 5 seconds
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 5000);
+    };
 
     return (
         <div className='relative'>
+            {/* Notification */}
+            {showNotification && (
+                <div className='fixed top-4 right-4 z-50 bg-[#deb94a] text-black px-6 py-4 rounded-lg shadow-lg border border-[#deb94a] animate-slide-in'>
+                    <div className='flex items-center space-x-3'>
+                        <div className='flex-shrink-0'>
+                            <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 20 20'>
+                                <path fillRule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z' clipRule='evenodd' />
+                            </svg>
+                        </div>
+                        <div>
+                            <p className='font-semibold'>To book send us email</p>
+                        </div>
+                        <button 
+                            onClick={() => setShowNotification(false)}
+                            className='flex-shrink-0 ml-2 text-black hover:text-gray-700'
+                        >
+                            <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
+                                <path fillRule='evenodd' d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z' clipRule='evenodd' />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <Image src={backgroundImage} alt="Background" className="absolute -bottom-96 left-0 opacity-5 " />
             <div className='px-4 2xl:px-0 relative z-40 pt-[100px]'>
                 <div className='flex flex-col justify-center items-center text-white mb-12 '>
@@ -137,9 +170,12 @@ export default function RentalPrice() {
                                                 <p>{item.duration}</p>
                                             </div>
                                         </div>
-                                        <a href={item.link} target='_black' className='w-full text-center rounded-lg border border-[#C7C7C7] group-hover:border-[#deb94a] group-hover:bg-[#deb94a] duration-300 py-4 text-lg font-semibold cursor-pointer mt-auto'>
+                                        <button 
+                                            onClick={handleChoosePlan}
+                                            className='w-full text-center rounded-lg border border-[#C7C7C7] group-hover:border-[#deb94a] group-hover:bg-[#deb94a] duration-300 py-4 text-lg font-semibold cursor-pointer mt-auto'
+                                        >
                                             Choose this plan
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
